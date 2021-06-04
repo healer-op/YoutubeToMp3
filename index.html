@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>YoutubeToMp3</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="YoutubeToMp3">
+  <meta name="keywords" content="Youtube">
+  <meta name="author" content="HEALER">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="https://www.freeiconspng.com/thumbs/youtube-logo-png/hd-youtube-logo-png-transparent-background-20.png" />
+  <link rel="shortcut icon" href="https://www.freeiconspng.com/thumbs/youtube-logo-png/hd-youtube-logo-png-transparent-background-20.png" type="image/x-icon">  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'><link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <header class="header">
+    <h1 id="title" class="text-center">YoutubeToMp3</h1>
+    <p id="description" class="description text-center">
+      Download Youtube Songs Super Fast
+    </p>
+  </header>
+  <center>
+ <iframe id="the-frame1" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <iframe id="the-frame" width="100%" height="200" frameBorder="0" src=""></iframe>
+</center>
+  <form id="url-setter">
+    <div class="form-group">
+      <p>Enter Video Id</p>
+      <textarea
+        id="url"
+        class="input-textarea"
+        name="url"
+        placeholder="0OEJWoI9Y-M"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+<script type="text/javascript">
+  (function () {
+      "use strict";
+      var url_setter = document.getElementById('url-setter'), url = document.getElementById('url'), the_iframe = document.getElementById('the-frame') , the_iframe1 = document.getElementById('the-frame1') ;
+      url_setter.onsubmit = function (event) {
+          event.preventDefault();
+          the_iframe.src = "https://www.yt-download.org/api/button/mp3/"+url.value;
+          the_iframe1.src = "https://www.youtube.com/embed/"+url.value+"?autoplay=1";
+      };
+  }());
+</script>
+
+
+</body>
+</html>
+
